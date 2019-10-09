@@ -1,28 +1,61 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="navbar">
+      <div class="desktop">
+        <div class="navbar-left">
+          <a href="/" id="navbar-title">socials.link</a>
+        </div>
+        <div class="navbar-right">
+          <a
+            href="/about"
+            :class="{'navbar-link-active': (window.location.pathname == '/about'), 'navbar-content-button': true}"
+          >About Us</a>
+          <a
+            href="/terms"
+            :class="{'navbar-link-active': (window.location.pathname == '/terms'), 'navbar-content-button': true}"
+          >Terms / Privacy Policy</a>
+          <span class="vl" />
+          <a
+            href="/register"
+            :class="{'navbar-link-active': (window.location.pathname == '/register'), 'navbar-content-button': true}"
+          >Register</a>
+          <a
+            href="/login"
+            :class="{'navbar-link-active': (window.location.pathname == '/login'), 'navbar-content-button': true}"
+          >Login</a>
+        </div>
+      </div>
+      <div class="mobile"></div>
+    </div>
+    <router-view />
+    <div class="footer" id="footer"></div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import utils from "./assets/JS/main.js";
+import log from "./assets/JS/logger.js";
+
+log("log", "Route", window.location.pathname);
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  name: "App",
+  data() {
+    return {
+      window: window
+    };
+  },
+  created() {
+    /*window.addEventListener("load", () => {
+      if (document.body.scrollHeight < window.innerHeight)
+        document.getElementById("footer").classList = "footer-fixed footer";
+      else
+        document.getElementById("footer").classList = "footer-relative footer";
+    });*/
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+@import "./assets/SCSS/root.scss";
 </style>

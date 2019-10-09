@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:600,700,800&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quantico&display=swap');
+
+// $dark: #262626;
+$dark: #dcdde1;
+$grey: #a3b0be;
+// $background: #c8d6e5;
+$background: #262626;
+$primary: #0097e6;
+
+* {
+  color: $dark;
+  font-family: Dosis, sans-serif;
+}
+
+hr {
+  border: $dark solid 1px;
+  border-radius: 5px;
+}
+
+html,
+body {
+  margin: 0;
+  background-color: $background;
+  display: flex;
+  height: 100%;
+  width: auto;
+}
+
+#app {
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  height: 100%;
+}
+
+router-view {
+  width: 100%;
+  height: 100%;
+}
+
+.mobile {
+  display: none;
+}
+
+.footer {
+  p {
+    margin: 0;
+    display: inline;
+    font-weight: 800;
+    font-family: Dosis,
+      sans-serif;
+  }
+
+  height: 4vh;
+  width: 100%;
+  background-color: $primary;
+
+}
+
+.navbar {
+  // margin: 0 10% 20px 10%;
+  padding: 10px calc(10% + 10px) 30px calc(10% + 10px);
+  width: 100%;
+  flex: auto;
+  background-color: $primary;
+
+  .vl {
+    border-left: 2px solid $grey;
+    border-radius: 15%;
+    max-width: 3px;
+    height: 40px;
+    margin: 0 5px;
+  }
+
+  #navbar-title {
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .navbar-left {
+    float: left;
+  }
+
+  .navbar-right {
+    float: right;
+  }
+
+  .navbar-content-button {
+    padding: 10px;
+    margin: 0 5px 0 5px;
+    transition: 0.2s;
+    text-decoration: none;
+  }
+
+  .navbar-content-button:hover {
+    background-color: $grey;
+    cursor: pointer;
+  }
+
+  .navbar-link-active {
+    background-color: $grey;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .desktop {
+    display: none
+  }
+
+  .mobile {
+    display: unset;
+  }
+
+  .navbar {
+    margin: 0;
+    padding: 5px;
+
+    .navbar-mobile {
+      a {
+        padding: 5px;
+        display: block;
+        transition: 0.2s;
+      }
+    }
+  }
+}
