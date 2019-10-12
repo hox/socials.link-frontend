@@ -2,20 +2,21 @@
 @import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Quantico&display=swap');
 
-// $dark: #262626;
-$dark: #dcdde1;
+// $text: #262626;
+$text: #dcdde1;
 $grey: #a3b0be;
 // $background: #c8d6e5;
 $background: #262626;
-$primary: #0097e6;
+// $primary: #0097e6;
+$primary: rgba(0, 0, 0, 0.3);
 
 * {
-  color: $dark;
+  color: $text;
   font-family: Dosis, sans-serif;
 }
 
 hr {
-  border: $dark solid 1px;
+  border: $text solid 1px;
   border-radius: 5px;
 }
 
@@ -23,9 +24,8 @@ html,
 body {
   margin: 0;
   background-color: $background;
-  display: flex;
   height: 100%;
-  width: auto;
+  width: 100%;
 }
 
 #app {
@@ -34,11 +34,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 router-view {
   width: 100%;
   height: 100%;
+  order: 1;
 }
 
 .mobile {
@@ -46,6 +52,15 @@ router-view {
 }
 
 .footer {
+  min-height: 30vh;
+  background-color: $primary;
+  order: 2;
+  padding: 14px calc(10% + 10px);
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
   p {
     margin: 0;
     display: inline;
@@ -54,21 +69,47 @@ router-view {
       sans-serif;
   }
 
-  height: 4vh;
-  width: 100%;
-  background-color: $primary;
+  .footer-section {
+    max-width: 30%;
+    width: 30%;
+    text-align: justify;
 
+    .footer-left {
+      order: 0;
+    }
+
+    .footer-center {
+      order: 1;
+    }
+
+    .footer-right {
+      order: 2;
+    }
+
+    .footer-title {
+      font-size: 20px;
+      min-width: 5px;
+      font-weight: 700;
+    }
+
+    .footer-bio {
+      font-size: 16px;
+      min-width: 5px;
+    }
+  }
+
+  span {
+    display: block;
+  }
 }
 
 .navbar {
-  // margin: 0 10% 20px 10%;
-  padding: 10px calc(10% + 10px) 30px calc(10% + 10px);
-  width: 100%;
-  flex: auto;
+  padding: 14px calc(10% + 10px);
+  order: 0;
   background-color: $primary;
 
   .vl {
-    border-left: 2px solid $grey;
+    border-left: 2px solid $text;
     border-radius: 15%;
     max-width: 3px;
     height: 40px;

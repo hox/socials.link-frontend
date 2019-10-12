@@ -4,30 +4,40 @@ import Landing from "@/pages/Landing.vue";
 import Not_Found from "@/pages/Error/Not_Found.vue";
 import Profile from "@/pages/Profile.vue";
 
+let log = require("./assets/JS/logger.js");
+
 var pingAPI = new Promise((resolve, reject) => {
   refreshAPIUrl();
-  let request = new XMLHttpRequest();
-  request.open("GET", `http://${api_server}/ping`, false);
-  request.send(null);
-
-  if (request.status == 200) {
+  if (window.localStorage.disable_api) {
     resolve();
+    log(
+      "err",
+      "WARNING",
+      "disable_api is on in localStorage. Please delete this from localStorage if you want to use the API."
+    );
   } else {
-    reject({
-      reason:
-        "API Could not get pinged. Try changing the API settings in localStorage."
-    });
+    let request = new XMLHttpRequest();
+    request.open("GET", `http://${api_server}/ping`, false);
+    request.send(null);
+
+    if (request.status == 200) {
+      resolve();
+    } else {
+      reject({
+        reason:
+          "API Could not get pinged. Try changing the API settings in localStorage."
+      });
+    }
   }
 });
 
-let log = require("./assets/JS/logger.js");
 let api_server = window.localStorage.api_url;
 pingAPI
   .then(() => {
     log("log", "API Found", `Ping request to API (${api_server}) successful.`);
   })
   .catch(err => {
-    log("err", "Error", err.reason);
+    log("err", "ERROR", err.reason);
   });
 
 Vue.use(Router);

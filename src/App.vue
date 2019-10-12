@@ -28,7 +28,45 @@
       <div class="mobile"></div>
     </div>
     <router-view />
-    <div class="footer" id="footer"></div>
+    <div class="footer" id="footer">
+      <div class="footer-section footer-left">
+        <span class="footer-title">Links</span>
+        <hr />
+        <span class="footer-bio">
+          &bull;
+          <a href="/login?type=register">Create an Account</a>
+          <br />&bull;
+          <a href="/login?type=login">Login</a>
+          <br />&bull;
+          <a href="/contact">Contact Us</a>
+          <br />&bull;
+          <a href="/contact">Request Verification</a>
+        </span>
+      </div>
+      <div class="footer-section footer-center">
+        <span class="footer-title">Legal</span>
+        <hr />
+        <span class="footer-bio">
+          &bull;
+          <a href="/tos">Terms Of Service</a>
+          <br />&bull;
+          <a href="/privacy_policy">Privacy Policy</a>
+          <br />
+          <br />Here at Socials Link we strive to keep your information safe and provide a great service at the same time.
+        </span>
+      </div>
+      <div class="footer-section footer-right">
+        <span class="footer-title">About Us</span>
+        <hr />
+        <span class="footer-bio">
+          Socials Link was made with ❤ by
+          <a href="/team">The Socials Link Team</a>.
+          <br />
+          <br />&bull;
+          <a href="https://twitter.com/SocialsLink" target="_blank">Our Twitter</a>
+        </span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -58,4 +96,8 @@ export default {
 
 <style lang="scss">
 @import "./assets/SCSS/root.scss";
+
+router-view {
+  order: 1;
+}
 </style>

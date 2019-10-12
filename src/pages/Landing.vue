@@ -1,5 +1,5 @@
 <template>
-  <div id="page_landing">
+  <div id="page-landing">
     <span class="title">socials.link</span>
     <span id="comingsoon">Your online business card.</span>
     <br />
@@ -18,13 +18,17 @@ export default {
 <style lang="scss">
 @import "./../assets/SCSS/root.scss";
 
-#page_landing {
-  position: absolute;
+#page-landing {
+  /*position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  animation: bouncein 0.7s;
-
+  animation: bouncein 0.7s;*/
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transform: translateY(-50px);
   img {
     height: 120px;
     width: auto;
@@ -52,7 +56,7 @@ export default {
       font-family: "Quantico";
       font-weight: 700;
       text-decoration: none;
-      color: $dark;
+      color: $text;
     }
   }
 }
