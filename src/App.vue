@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="navbar">
+    <!--<div class="navbar">
       <div class="desktop">
         <div class="navbar-left">
           <a href="/" id="navbar-title">socials.link</a>
@@ -26,9 +26,9 @@
         </div>
       </div>
       <div class="mobile"></div>
-    </div>
+    </div>-->
     <router-view />
-    <div class="footer" id="footer">
+    <!--<div class="footer" id="footer">
       <div class="footer-section footer-left">
         <span class="footer-title">Links</span>
         <hr />
@@ -66,7 +66,7 @@
           <a href="https://twitter.com/SocialsLink" target="_blank">Our Twitter</a>
         </span>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
 
@@ -95,9 +95,6 @@ export default {
 </script>
 
 <style lang="scss">
+// THIS APPLIES TO THE ENTIRE WEBSITE
 @import "./assets/SCSS/root.scss";
-
-router-view {
-  order: 1;
-}
 </style>

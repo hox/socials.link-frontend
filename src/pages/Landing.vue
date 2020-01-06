@@ -1,11 +1,14 @@
 <template>
-  <div id="page-landing">
-    <span class="title">socials.link</span>
-    <span id="comingsoon">Your online business card.</span>
-    <br />
-    <span id="register">
-      <router-link id="register_button" to="/register">Register Now!</router-link>
-    </span>
+  <div style="height: 100%;">
+    <div class="section-1">
+      <div class="article">
+        <span id="title">socials.link</span>
+        <span id="slogan">Your online business card.</span>
+      </div>
+    </div>
+    <div class="section-2">
+      <span>sec 2</span>
+    </div>
   </div>
 </template>
 
@@ -15,58 +18,39 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "./../assets/SCSS/root.scss";
 
-#page-landing {
-  /*position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  animation: bouncein 0.7s;*/
-  min-height: 100%;
+.section-1 {
+  order: 1;
+  height: 100%;
+  background-color: $background;
+
+  // The code blow is used for centering on the Y-axis without the use of position absolute. Good job eli!
+  // In case some idiot is reading this code, the Y-axis is the vertical one.
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  transform: translateY(-50px);
-  img {
-    height: 120px;
-    width: auto;
-  }
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  // END OF CODE
 
-  hr {
-    width: 300px;
-  }
+  .article {
+    span {
+      display: block;
+    }
 
-  #comingsoon {
-    font-size: 30px;
-    display: block;
-  }
+    #title {
+      font-size: 60px;
+    }
 
-  .title {
-    font-size: 80px;
-    font-weight: 800;
-  }
-
-  #register {
-    #register_button {
-      background-color: $primary;
-      padding: 15px;
-      border-radius: 2px;
-      font-family: "Quantico";
-      font-weight: 700;
-      text-decoration: none;
-      color: $text;
+    #slogan {
+      font-size: 20px;
     }
   }
 }
 
-@keyframes bouncein {
-  0% {
-    transform: translateX(-50%) translateY(-60%);
-  }
-  100% {
-    transform: translateX(-50%) translateY(-50%);
-  }
+.section-2 {
+  background-color: blue;
+  height: 30vh;
 }
 </style>
