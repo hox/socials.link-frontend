@@ -8,8 +8,10 @@ import Profile from "@/pages/Profile.vue";
 
 let log = require("./assets/JS/logger.js");
 
-var pingAPI = new Promise((resolve, reject) => {
+var pingAPI = new Promise(async (resolve, reject) => {
   refreshAPIUrl();
+  const reject_reason =
+    "API could not get pinged. Try changing the API settings in localStorage.";
   if (window.localStorage.disable_api) {
     reject();
     log(
@@ -18,18 +20,25 @@ var pingAPI = new Promise((resolve, reject) => {
       "'disable_api' is enabled in localStorage. Please delete this from localStorage if you want to use the API."
     );
   } else {
-    let request = new XMLHttpRequest();
-    request.open("GET", `http://${api_server}/ping`, false);
-    request.send(null);
-
-    if (request.status == 200) {
-      resolve();
-    } else {
-      reject({
-        reason:
-          "API Could not get pinged. Try changing the API settings in localStorage."
+    fetch(`http://${api_server}/ping`, {
+      method: "GET",
+      mode: "no-cors"
+    })
+      .then(res => {
+        return res.text();
+      })
+      .then(json => {
+        json
+          ? resolve()
+          : reject({
+              reason: reject_reason
+            });
+      })
+      .catch(() => {
+        reject({
+          reason: reject_reason
+        });
       });
-    }
   }
 });
 
@@ -62,20 +71,25 @@ export default new Router({
       component: Profile,
       beforeEnter: (to, from, next) => {
         refreshAPIUrl();
-        let request = new XMLHttpRequest();
-        request.open(
-          "GET",
-          `http://${api_server}/user?username=` +
-            to.path.slice(1, to.path.length),
-          false
-        );
-        request.send(null);
-
-        if (request.status == 200) {
-          next();
-        } else {
-          next({ path: "/404" });
-        }
+        fetch(
+          `http://${api_server}/user?username=${to.path.slice(
+            1,
+            to.path.length
+          )}`,
+          {
+            method: "GET",
+            mode: "no-cors"
+          }
+        )
+          .then(res => {
+            return res.text();
+          })
+          .then(json => {
+            json ? next() : next({ path: "/404" });
+          })
+          .catch(() => {
+            next({ path: "/404" });
+          });
       }
     }
   ],

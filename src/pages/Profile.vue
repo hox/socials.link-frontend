@@ -1,12 +1,12 @@
 <template>
   <div class="page">
+    <h1>Profile Page</h1>
     <UserInfo :user="user" />
     <IntegrationsBox :user="user" />
   </div>
 </template>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
 
 <script>
 import IntegrationsBox from "./../components/UserProfile/IntegrationsBox.vue";
