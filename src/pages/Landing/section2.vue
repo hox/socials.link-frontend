@@ -26,6 +26,7 @@ export default {
   height: 1000px;
   width: 100%;
   margin-top: -34%;
+  transition: margin-top 100ms;
 }
 
 .section-2 {
