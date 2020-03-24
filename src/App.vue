@@ -1,72 +1,35 @@
 <template>
   <div id="app">
-    <!--<div class="navbar">
-      <div class="desktop">
-        <div class="navbar-left">
-          <a href="/" id="navbar-title">socials.link</a>
+    <div class="navbarcontainer">
+        <div class="navbar">
+            <div class="navbar-left">
+                <a href="/" id="navbar-title">socials.link</a>
+                <img src="./assets/IMG/standard_logo.png" id="logo" />
+            </div>
+            <div class="navbar-right">
+                <a href="/#about" class="navbar-content-button">About Us</a>
+                <a href="/#features" class="navbar-content-button">Features</a>
+                <span class="vl" />
+                <!-- <a
+                    href="/register"
+                    :class="{
+                    'navbar-link-active': window.location.pathname == '/register',
+                    'navbar-content-button': true
+                    }"
+                    >Register</a
+                >-->
+                <a
+                    href="/login"
+                    :class="{
+                    //'navbar-link-active': window.location.pathname == '/login',
+                    'navbar-content-button': true
+                    }"
+                >Login</a>
+            </div>
         </div>
-        <div class="navbar-right">
-          <a
-            href="/about"
-            :class="{'navbar-link-active': (window.location.pathname == '/about'), 'navbar-content-button': true}"
-          >About Us</a>
-          <a
-            href="/terms"
-            :class="{'navbar-link-active': (window.location.pathname == '/terms'), 'navbar-content-button': true}"
-          >Terms / Privacy Policy</a>
-          <span class="vl" />
-          <a
-            href="/register"
-            :class="{'navbar-link-active': (window.location.pathname == '/register'), 'navbar-content-button': true}"
-          >Register</a>
-          <a
-            href="/login"
-            :class="{'navbar-link-active': (window.location.pathname == '/login'), 'navbar-content-button': true}"
-          >Login</a>
-        </div>
-      </div>
-      <div class="mobile"></div>
-    </div>-->
+    </div>
     <router-view />
-    <!--<div class="footer" id="footer">
-      <div class="footer-section footer-left">
-        <span class="footer-title">Links</span>
-        <hr />
-        <span class="footer-bio">
-          &bull;
-          <a href="/login?type=register">Create an Account</a>
-          <br />&bull;
-          <a href="/login?type=login">Login</a>
-          <br />&bull;
-          <a href="/contact">Contact Us</a>
-          <br />&bull;
-          <a href="/contact">Request Verification</a>
-        </span>
-      </div>
-      <div class="footer-section footer-center">
-        <span class="footer-title">Legal</span>
-        <hr />
-        <span class="footer-bio">
-          &bull;
-          <a href="/tos">Terms Of Service</a>
-          <br />&bull;
-          <a href="/privacy_policy">Privacy Policy</a>
-          <br />
-          <br />Here at Socials Link we strive to keep your information safe and provide a great service at the same time.
-        </span>
-      </div>
-      <div class="footer-section footer-right">
-        <span class="footer-title">About Us</span>
-        <hr />
-        <span class="footer-bio">
-          Socials Link was made with ❤ by
-          <a href="/team">The Socials Link Team</a>.
-          <br />
-          <br />&bull;
-          <a href="https://twitter.com/SocialsLink" target="_blank">Our Twitter</a>
-        </span>
-      </div>
-    </div>-->
+    <div class="footer" id="footer" style="order:3;"></div>
   </div>
 </template>
 
@@ -95,6 +58,5 @@ export default {
 </script>
 
 <style lang="scss">
-// THIS APPLIES TO THE ENTIRE WEBSITE
 @import "./assets/SCSS/root.scss";
 </style>

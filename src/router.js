@@ -1,6 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
+
 import Landing from "@/pages/Landing.vue";
+
 import Not_Found from "@/pages/Error/Not_Found.vue";
 import Profile from "@/pages/Profile.vue";
 
@@ -9,11 +11,11 @@ let log = require("./assets/JS/logger.js");
 var pingAPI = new Promise((resolve, reject) => {
   refreshAPIUrl();
   if (window.localStorage.disable_api) {
-    resolve();
+    reject();
     log(
-      "err",
+      "warn",
       "WARNING",
-      "disable_api is on in localStorage. Please delete this from localStorage if you want to use the API."
+      "'disable_api' is enabled in localStorage. Please delete this from localStorage if you want to use the API."
     );
   } else {
     let request = new XMLHttpRequest();
@@ -37,7 +39,7 @@ pingAPI
     log("log", "API Found", `Ping request to API (${api_server}) successful.`);
   })
   .catch(err => {
-    log("err", "ERROR", err.reason);
+    err ? log("err", "ERROR", err.reason) : null;
   });
 
 Vue.use(Router);

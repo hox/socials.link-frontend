@@ -1,11 +1,11 @@
 <template>
-  <div id="user-profile">
+  <div class="page">
     <UserInfo :user="user" />
     <IntegrationsBox :user="user" />
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 </style>
 
 <script>

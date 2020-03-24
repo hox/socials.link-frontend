@@ -1,5 +1,5 @@
 <template>
-  <div id="404_Not_Found_Page">
+  <div class="page">
     <span>hi</span>
   </div>
 </template>
@@ -8,3 +8,5 @@ export default {
   name: "Not_Found"
 };
 </script>
+<style lang="less" scoped>
+</style>
