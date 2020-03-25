@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const levels = {
   log: "1e858d",
   warn: "dfa533",

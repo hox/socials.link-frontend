@@ -7,6 +7,7 @@
           <img src="./assets/IMG/standard_logo.png" id="logo" />
         </div>
         <div class="navbar-right">
+          <a href="/#plans" class="navbar-content-button">Plans</a>
           <a href="/#about" class="navbar-content-button">About Us</a>
           <a href="/#features" class="navbar-content-button">Features</a>
           <span class="vl" />
@@ -17,17 +18,24 @@
             }"
             >Login</a
           >
+					<a
+            href="/signup"
+            :class="{
+              'navbar-content-button': true
+            }"
+            >Signup</a
+          >
         </div>
       </div>
     </div>
     <router-view />
-    <div class="footer" id="footer" style="order:3;"></div>
   </div>
 </template>
 
 <script>
 // import utils from "./assets/JS/main.js";
 import log from "./assets/JS/logger.js";
+import AOS from "aos";
 
 log("log", "Route", window.location.pathname);
 
@@ -43,28 +51,27 @@ export default {
       //The ScrollY range where the parallax animation occurs
       const range = 1000;
       //The maximum the wave moves relative to the % of the parent div
-      const maxAdjustmnet = 7;
+      const maxAdjustment = 7;
       let adjustment;
       if (window.scrollY > range) {
-        adjustment = maxAdjustmnet;
+        adjustment = maxAdjustment;
       } else {
-        adjustment = window.scrollY / (range / maxAdjustmnet);
+        adjustment = window.scrollY / (range / maxAdjustment);
       }
-      document.getElementById("curve").style.marginTop = `${-34 - adjustment}%`;
+      document.getElementById("curve").style.marginTop = `${-33 - adjustment}%`;
     });
   },
   destroyed: function() {
     window.removeEventListener("scroll", () => {});
+  },
+  mounted: function(){
+    AOS.init()
   }
 };
 </script>
 
 <style lang="scss">
-@import "./assets/SCSS/root.scss";
-
-#app {
-  height: 5000px;
-}
+@import "@/assets/SCSS/root.scss";
 
 .navbar-bold {
   border-radius: 0 0 5px 5px !important;
@@ -80,7 +87,7 @@ export default {
 
 .navbar {
   display: inline-block;
-  width: 60%;
+  width: 70%;
   padding: 14px 0;
   order: 0;
   transition: 0.2s;
@@ -91,10 +98,9 @@ export default {
   position: fixed;
   left: 50%;
   transform: translate(-50%, 0);
-  z-index: 151;
+	z-index: 1000;
 
   a {
-    font-family: Dosis, sans-serif;
     text-decoration: none;
   }
 
