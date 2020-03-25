@@ -7,7 +7,7 @@
       <span id="about" />
       
       <div id="parent-div">
-        <div class="section2-title">Easily Link to<br><del>Dozens of</del> 10 Providers</div>
+        <div class="section2-title">Easily Link to<br>Dozens of Providers</div>
           <div class="providerContainer">
             <img class="logo" src="@/assets/logos/TikTok.png" data-aos="fade-up" data-aos-delay="50">
             <img class="logo" src="@/assets/logos/YouTube.png" data-aos="fade-up" data-aos-delay="100">
