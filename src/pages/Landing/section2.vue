@@ -131,6 +131,7 @@ img {
 @media (max-width: 900px) {
   .section2-title {
     font-size: 50px;
+    margin-top: 40px;
   }
 
   #parent-div {
