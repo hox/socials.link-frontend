@@ -20,7 +20,7 @@ var pingAPI = new Promise(async (resolve, reject) => {
       "'disable_api' is enabled in localStorage. Please delete this from localStorage if you want to use the API."
     );
   } else {
-    fetch(`http://${api_server}/ping`, {
+    fetch(`${api_server}/ping`, {
       method: "GET",
       mode: "no-cors"
     })
@@ -72,7 +72,7 @@ export default new Router({
       beforeEnter: (to, from, next) => {
         refreshAPIUrl();
         fetch(
-          `http://${api_server}/user?username=${to.path.slice(
+          `${api_server}/user?username=${to.path.slice(
             1,
             to.path.length
           )}`,
@@ -97,5 +97,5 @@ export default new Router({
 });
 
 function refreshAPIUrl() {
-  api_server = window.localStorage.api_url || "api.socials.link";
+  api_server = window.localStorage.api_url || "https://api.socials.link";
 }

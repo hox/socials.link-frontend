@@ -3,9 +3,9 @@
     <div class="article">
       <div id="stats"></div>
       <br />
-      <div class="articleimagegroup" id="imagecontainer">
-        <span id="title">Welcome to Your<br />Online Business Card</span>
-        <img src="./../../assets/IMG/macos.svg" id="macos" />
+    <div id="parent-div">
+      <span id="title">Welcome to Your<br />Online Business Card</span>
+      <img src="./../../assets/IMG/macos.png" id="macos" />
       </div>
     </div>
 
@@ -22,7 +22,15 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./../../assets/SCSS/root.scss";
+@import "@/assets/SCSS/root.scss";
+
+
+
+#parent-div {
+    max-width: 60%;
+    margin: auto;
+    font-size: 16px;
+  }
 
 .section-1 {
   order: 1;
@@ -58,22 +66,12 @@ export default {
       margin: 10px 10px 10px 10px;
     }
 
-    .articleimagegroup {
-      max-width: 60%;
-      margin: auto;
-      font-size: 16px;
-    }
-
-    img {
+    #macos {
       width: 100%;
       border-radius: 15px;
-      //   margin: 50px 10px 50px 10px;
-      -webkit-box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.75);
       box-shadow: 0px 0px 30px -4px rgba(0, 0, 0, 0.75);
-      // border: 1px solid $background;
       pointer-events: none;
-      z-index: 120;
+      z-index: -200;
     }
   }
 
@@ -96,18 +94,6 @@ export default {
 
   #readmore:hover {
     cursor: pointer;
-  }
-
-  @media (max-width: 951px) {
-    #ios {
-      display: none;
-    }
-  }
-
-  @media (max-height: 745px) {
-    #macos {
-      display: none;
-    }
   }
 
   #articlecontent {
