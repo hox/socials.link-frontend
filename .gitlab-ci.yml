@@ -1,0 +1,49 @@
+include:
+  - template: Code-Quality.gitlab-ci.yml
+
+image: node:latest
+
+stages:
+  - test
+  - build
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+code_quality:
+  artifacts:
+    paths: [gl-code-quality-report.json]
+
+npm lint:
+  before_script:
+    - npm install
+  stage: test
+  script:
+    - npm run lint
+
+npm flow:
+  before_script:
+    - npm install
+  stage: test
+  script:
+    - npm run flow
+
+npm audit:
+  before_script:
+    - npm install
+  stage: test
+  script:
+    - npm audit
+
+build site:
+  before_script:
+    - npm install
+  stage: build
+  script:
+    - npm run lib:build
+  artifacts:
+    paths:
+      - /dist
+    expire_in: 30 days
