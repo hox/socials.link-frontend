@@ -1,8 +1,7 @@
 <template>
   <div class="page">
     <h1>
-      I COULDNT FIND THE FUCKING PAGE<br />
-      FUCK
+      Page unfound<br />
     </h1>
   </div>
 </template>
