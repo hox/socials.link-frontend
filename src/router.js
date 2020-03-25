@@ -95,5 +95,5 @@ export default new Router({
 });
 
 function refreshAPIUrl() {
-  api_server = window.localStorage.api_url || "https://api.socials.link";
+  api_server = window.localStorage.api_url || "http://localhost:8086";
 }

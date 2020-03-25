@@ -5,18 +5,14 @@
       <div id="group-flex">
         <div class="group" id="teams">
           <div class="group-padding">
-            <div class="title-flex">
-              <h2 class="group-title"><span class="main teams-title">Teams</span><span class="secondary teams-title">    $5 / Month</span></h2>
-            </div>
+              <h2><span class="main teams-title">Teams</span><br><span class="secondary teams-title">$5 / Month</span></h2>
             <features text-color="white" color="white" v-bind:features="defaultFeatures"/>
             <features text-color="green" color="green" v-bind:features="teamsFeatures" id="team-features"/>
           </div>
         </div>
         <div class="group" id="individual">
           <div class="group-padding">
-            <div class="title-flex">
-              <h2 class="group-title"><span class="main">Individual</span><span class="secondary">    Free</span></h2>
-            </div>
+              <h2><span class="main">Individual</span><br><span class="secondary">Free</span></h2>
             <features text-color="black" color="black" v-bind:features="defaultFeatures" id="free-features"/>
           </div>
         </div>
@@ -78,34 +74,23 @@ export default {
   width: 100%;
 }
 
-.group-title {
+h2 {
   width: 100%;
-  text-align: justify;
-  margin: 0;
+  text-align: left;
 }
 
 .main {
-	font-size: 60px;
+	font-size: 50px;
 	font-weight: 800;
   font-family: "Roboto", sans-serif;
-  max-width: 100%;
   margin: 0;
 }
 
 .secondary {
-	font-size: 30px;
+	font-size: 25px;
 	font-weight: 400;
   font-family: "Roboto", sans-serif;
-  max-width: 100%;
   margin: 0;
-  white-space: pre-wrap;
-}
-
-.title-flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0 0 30px 0;
 }
 
 .teams-title {
@@ -141,17 +126,20 @@ export default {
     max-width: 80%;
   }
 
+  #teams {
+    margin: 0 0 30px 0;
+  }
+
   .section4-title {
     font-size: 50px;
   }
 
   #group-flex {
-    display: block;
+    flex-direction: column;
   }
 
   .group {
-    width: 95%;
-    margin: 0 auto;
+    width: 100%;
   }
 
   .main {
@@ -161,23 +149,6 @@ export default {
   .secondary {
     font-size: 18px;
   }
-
-  .group-title {
-    padding-top: 12px;
-  }
-
-  #team-features {
-    padding-bottom: 12px;
-  }
-
-  #free-features {
-    padding-bottom: 12px;
-  }
-
-  .feature-text {
-    text-align: left;
-  }
-
 }
 
 </style>
