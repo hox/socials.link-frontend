@@ -25,7 +25,7 @@ var pingAPI = new Promise(async (resolve, reject) => {
       mode: "no-cors"
     })
       .then(res => {
-        return res.text();
+        return res.json();
       })
       .then(json => {
         json
@@ -72,10 +72,7 @@ export default new Router({
       beforeEnter: (to, from, next) => {
         refreshAPIUrl();
         fetch(
-          `${api_server}/user?username=${to.path.slice(
-            1,
-            to.path.length
-          )}`,
+          `${api_server}/user?username=${to.path.slice(1, to.path.length)}`,
           {
             method: "GET",
             mode: "no-cors"
