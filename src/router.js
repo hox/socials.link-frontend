@@ -72,7 +72,7 @@ export default new Router({
       beforeEnter: (to, from, next) => {
         refreshAPIUrl();
         fetch(
-          `http://${api_server}/user?username=${to.path.slice(
+          `https://${api_server}/user?username=${to.path.slice(
             1,
             to.path.length
           )}`,
