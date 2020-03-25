@@ -47,7 +47,7 @@ export default {
     #title {
       margin-top: 140px;
       margin-bottom: 90px;
-      font-size: 3.2vw;
+      font-size: 82px;
       font-weight: 800;
       font-family: "Roboto", sans-serif;
       float: left;
@@ -73,6 +73,24 @@ export default {
       pointer-events: none;
       z-index: -200;
     }
+
+    @media (max-width: 900px) {
+      #title {
+        font-size: 60px;
+        margin-top: 80px;
+        margin-bottom: 120px; 
+      }
+
+      #macos {
+        display: none;
+      }
+
+      #parent-div {
+        max-width: 70%;
+      }
+
+    }
+
   }
 
   #readmore {

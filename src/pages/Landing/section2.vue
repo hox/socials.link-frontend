@@ -44,8 +44,11 @@ export default {
 
 .logo {
   height: 60px;
-//   width: 60px;
-pointer-events: none;
+  //   width: 60px;
+}
+
+img {
+  pointer-events: none !important;
 }
 
 #parent-div {
@@ -90,7 +93,7 @@ pointer-events: none;
   background: 0;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
-  fdont-size: 24px;
+  font-size: 24px;
   padding: 0;
 }
 
@@ -118,10 +121,24 @@ pointer-events: none;
 
 .section2-title {
   margin: 0 0 110px 0;
-  font-size: 3.2vw;
+  font-size: 82px;
   font-weight: 800;
   font-family: "Roboto", serif;
   max-width: 100%;
   text-align: right;
+}
+
+@media (max-width: 900px) {
+  .section2-title {
+    font-size: 50px;
+  }
+
+  #parent-div {
+    max-width: 80%;
+  }
+
+  .logo {
+    height: 40px;
+  }
 }
 </style>

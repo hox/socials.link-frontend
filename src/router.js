@@ -22,22 +22,23 @@ var pingAPI = new Promise(async (resolve, reject) => {
   } else {
     fetch(`${api_server}/ping`, {
       method: "GET",
-      mode: "no-cors"
+      mode: "cors"
     })
       .then(res => {
+        console.log(res)
         return res.json();
       })
       .then(json => {
-        json
-          ? resolve()
-          : reject({
-              reason: reject_reason
-            });
+        console.log('a')
+        console.log(json)
+          // reject({
+          //     reason: reject_reason
+          //   });
       })
       .catch(() => {
-        reject({
-          reason: reject_reason
-        });
+        // reject({
+        //   reason: reject_reason
+        // });
       });
   }
 });

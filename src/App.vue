@@ -7,9 +7,9 @@
           <img src="./assets/IMG/standard_logo.png" id="logo" />
         </div>
         <div class="navbar-right">
-          <a href="/#plans" class="navbar-content-button">Plans</a>
-          <a href="/#about" class="navbar-content-button">About Us</a>
-          <a href="/#features" class="navbar-content-button">Features</a>
+          <a href="/#plans" class="navbar-content-button" id="plans-button">Plans</a>
+          <a href="/#about" class="navbar-content-button" id="about-button">About Us</a>
+          <a href="/#features" class="navbar-content-button" id="features-button">Features</a>
           <span class="vl" />
           <a
             href="/login"
@@ -143,6 +143,14 @@ export default {
 
     #logo {
       display: flex;
+    }
+
+    #plans-button {
+      display: none;
+    }
+
+    #features-button {
+      display: none;
     }
   }
 
