@@ -5,40 +5,40 @@
 
 @import url("https://unpkg.com/aos@next/dist/aos.css");
 
-@import 'variables.scss';
+@import "variables.scss";
 
 * {
-  color: $text;
-  font-family: Roboto, sans-serif;
+    color: $text;
+    font-family: Roboto, sans-serif;
 }
 
 html,
 body {
-  margin: 0 auto;
-  background-color: $background;
-  height: 100%;
-  width: 100%;
-  text-rendering: optimizeLegibility;
-  scroll-behavior: smooth;
+    margin: 0 auto;
+    background-color: $background;
+    height: 100%;
+    width: 100%;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
 }
 
 #app {
-  font-family: sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
 }
 
 // COLOR CLASSES
 
 .text-light {
-  color: $background;
+    color: $background;
 }
 
 .text-dark {
-  color: $text;
+    color: $text;
 }
 
 .text-prim {
-  color: $primary;
+    color: $primary;
 }

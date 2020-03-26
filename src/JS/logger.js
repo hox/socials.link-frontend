@@ -3,7 +3,7 @@
 const levels = {
   log: "1e858d",
   warn: "dfa533",
-  err: "f53634"
+  err: "f53634",
 };
 
 module.exports = (type, title, description) => {
