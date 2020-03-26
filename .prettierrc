@@ -4,7 +4,7 @@
     "semi": true,
     "singleQuote": false,
     "quoteProps": "as-needed",
-    "trailingComma": "es5",
+    "trailingComma": "none",
     "bracketSpacing": true,
     "arrowParens": "always",
     "htmlWhitespaceSensitivity": "css",
