@@ -7,36 +7,21 @@
                     <img src="./assets/IMG/standard_logo.png" id="logo" />
                 </div>
                 <div class="navbar-right">
-                    <a
-                        href="/#plans"
-                        class="navbar-content-button"
-                        id="plans-button"
-                        >Plans</a
-                    >
-                    <a
-                        href="/#about"
-                        class="navbar-content-button"
-                        id="about-button"
-                        >About Us</a
-                    >
-                    <a
-                        href="/#features"
-                        class="navbar-content-button"
-                        id="features-button"
-                        >Features</a
-                    >
+                    <a href="/#plans" class="navbar-content-button" id="plans-button">Plans</a>
+                    <a href="/#about" class="navbar-content-button" id="about-button">About Us</a>
+                    <a href="/#features" class="navbar-content-button" id="features-button">Features</a>
                     <span class="vl" />
                     <a
                         href="/login"
                         :class="{
-                            'navbar-content-button': true,
+                            'navbar-content-button': true
                         }"
                         >Login</a
                     >
                     <a
                         href="/signup"
                         :class="{
-                            'navbar-content-button': true,
+                            'navbar-content-button': true
                         }"
                         >Signup</a
                     >
@@ -49,7 +34,7 @@
 
 <script>
     // import utils from "./assets/JS/main.js";
-    import log from "./assets/JS/logger.js";
+    import log from "./JS/logger.js";
     import AOS from "aos";
 
     log("log", "Route", window.location.pathname);
@@ -59,13 +44,9 @@
         created: function() {
             window.addEventListener("scroll", () => {
                 if (window.scrollY == 0) {
-                    document
-                        .getElementById("navbar")
-                        .classList.remove("navbar-bold");
+                    document.getElementById("navbar").classList.remove("navbar-bold");
                 } else {
-                    document
-                        .getElementById("navbar")
-                        .classList.add("navbar-bold");
+                    document.getElementById("navbar").classList.add("navbar-bold");
                 }
                 //The ScrollY range where the parallax animation occurs
                 const range = 1000;
@@ -77,8 +58,7 @@
                 } else {
                     adjustment = window.scrollY / (range / maxAdjustment);
                 }
-                document.getElementById("curve").style.marginTop = `${-33 -
-                    adjustment}%`;
+                document.getElementById("curve").style.marginTop = `${-33 - adjustment}%`;
             });
         },
         destroyed: function() {
@@ -86,13 +66,11 @@
         },
         mounted: function() {
             AOS.init();
-        },
+        }
     };
 </script>
 
 <style lang="scss">
-    @import "@/assets/SCSS/root.scss";
-
     .navbar-bold {
         border-radius: 0 0 5px 5px !important;
         margin-top: 0px !important;
@@ -125,7 +103,6 @@
         }
 
         .vl {
-            border-left: 2px solid $darkbackground;
             border-radius: 15%;
             max-width: 3px;
             height: 40px;
