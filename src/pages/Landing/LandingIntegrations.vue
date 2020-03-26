@@ -1,6 +1,6 @@
 <template>
     <div class="landing-integrations">
-        <!--        For anchor link-->
+        <!--For anchor link-->
         <span id="integrations" />
         <!--        -->
         <div class="max-width">
