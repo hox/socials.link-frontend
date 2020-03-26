@@ -8,18 +8,18 @@
             <div id="parent-div">
                 <div class="section2-title">Easily Link to<br>Dozens of Providers</div>
                 <div class="providerContainer">
-                    <img class="logo" data-aos="fade-up" data-aos-delay="50" src="@/assets/logos/TikTok.png">
-                    <img class="logo" data-aos="fade-up" data-aos-delay="100" src="@/assets/logos/YouTube.png">
-                    <img class="logo" data-aos="fade-up" data-aos-delay="150" src="@/assets/logos/Instagram.png">
-                    <img class="logo" data-aos="fade-up" data-aos-delay="200" src="@/assets/logos/Twitter.svg">
-                    <img class="logo" data-aos="fade-up" data-aos-delay="250" src="@/assets/logos/Twitch.svg">
+                    <img class="logo" data-aos="fade-up" data-aos-delay="50" src="@/assets/logos/TikTok.png" alt="TikTok logo">
+                    <img class="logo" data-aos="fade-up" data-aos-delay="100" src="@/assets/logos/YouTube.png" alt="YouTube logo">
+                    <img class="logo" data-aos="fade-up" data-aos-delay="150" src="@/assets/logos/Instagram.png" alt="Instagram logo">
+                    <img class="logo" data-aos="fade-up" data-aos-delay="200" src="@/assets/logos/Twitter.svg" alt="Twitter logo">
+                    <img class="logo" data-aos="fade-up" data-aos-delay="250" src="@/assets/logos/Twitch.svg" alt="Twitch logo">
                 </div>
                 <div class="providerContainer">
-                    <img class="logo" data-aos="fade-up" data-aos-delay="300" src="@/assets/logos/Discord.svg">
-                    <img class="logo" data-aos="fade-up" data-aos-delay="350" src="@/assets/logos/Facebook.png">
-                    <img class="logo" data-aos="fade-up" data-aos-delay="400" src="@/assets/logos/Patreon.png">
-                    <img class="logo" data-aos="fade-up" data-aos-delay="450" src="@/assets/logos/Spotify.png">
-                    <img class="logo" data-aos="fade-up" data-aos-delay="500" src="@/assets/logos/GitHub.png">
+                    <img class="logo" data-aos="fade-up" data-aos-delay="300" src="@/assets/logos/Discord.svg" alt="Discord logo">
+                    <img class="logo" data-aos="fade-up" data-aos-delay="350" src="@/assets/logos/Facebook.png" alt="Facebook logo">
+                    <img class="logo" data-aos="fade-up" data-aos-delay="400" src="@/assets/logos/Patreon.png" alt="Patreon logo">
+                    <img class="logo" data-aos="fade-up" data-aos-delay="450" src="@/assets/logos/Spotify.png" alt="Spotify logo">
+                    <img class="logo" data-aos="fade-up" data-aos-delay="500" src="@/assets/logos/GitHub.png" alt="GitHub logo">
                 </div>
                 <!-- <div class="signup-input" data-aos="fade-in" data-aos-delay="550">
                     <form>
