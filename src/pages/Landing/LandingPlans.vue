@@ -106,7 +106,7 @@
     }
 
     #individual {
-        background: #efefef;
+        background: $lightgray;
     }
     .white {
         color: #fff;
