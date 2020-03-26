@@ -49,7 +49,7 @@ build:
     - npm install
   stage: build
   script:
-    - npm run lib:build
+    - npm run build
   artifacts:
     paths:
       - /dist
