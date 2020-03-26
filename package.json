@@ -22,6 +22,7 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.1.2",
+    "flow-bin": "^0.121.0",
     "node-sass": "^4.13.1",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
@@ -47,6 +48,6 @@
   },
   "browserslist": [
     "> 1%",
-    "last 5 versions"
+    "last 2 versions"
   ]
 }
