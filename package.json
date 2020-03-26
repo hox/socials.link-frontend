@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "flow": "flow"
+    "flow": "flow",
+    "prettier": "prettier --check \"**/*\""
   },
   "dependencies": {
     "aos": "^2.3.4",

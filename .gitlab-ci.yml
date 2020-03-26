@@ -16,14 +16,21 @@ code_quality:
   artifacts:
     paths: [gl-code-quality-report.json]
 
-npm lint:
+prettier:
+  before_script:
+    - npm install
+  stage: test
+  script:
+    - npm run prettier
+
+lint:
   before_script:
     - npm install
   stage: test
   script:
     - npm run lint
 
-npm flow:
+flow:
   before_script:
     - npm install
   stage: test
@@ -37,7 +44,7 @@ npm audit:
   script:
     - npm audit
 
-build site:
+build:
   before_script:
     - npm install
   stage: build
