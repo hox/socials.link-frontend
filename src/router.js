@@ -2,9 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 
 import Landing from "@/pages/Landing.vue";
-
 import Not_Found from "@/pages/Error/Not_Found.vue";
-import Profile from "@/pages/Profile.vue";
 
 let log = require("./assets/JS/logger.js");
 
@@ -21,15 +19,15 @@ const pingAPI = new Promise((resolve, reject) => {
     } else {
         fetch(`${api_server}/ping`, {
             method: "GET",
-            mode: "cors"
+            mode: "cors",
         })
-            .then(res => {
-                console.log(res)
+            .then((res) => {
+                console.log(res);
                 return res.json();
             })
-            .then(json => {
-                console.log('a')
-                console.log(json)
+            .then((json) => {
+                console.log("a");
+                console.log(json);
                 // reject({
                 //     reason: reject_reason
                 //   });
@@ -45,9 +43,13 @@ const pingAPI = new Promise((resolve, reject) => {
 let api_server = window.localStorage.api_url;
 pingAPI
     .then(() => {
-        log("log", "API Found", `Ping request to API (${api_server}) successful.`);
+        log(
+            "log",
+            "API Found",
+            `Ping request to API (${api_server}) successful.`
+        );
     })
-    .catch(err => {
+    .catch((err) => {
         err ? log("err", "ERROR", err.reason) : null;
     });
 
@@ -58,39 +60,15 @@ export default new Router({
         {
             path: "/",
             name: "home",
-            component: Landing
+            component: Landing,
         },
         {
             path: "/404",
             name: "404",
-            component: Not_Found
+            component: Not_Found,
         },
-        {
-            path: "/:username",
-            name: "User",
-            component: Profile,
-            beforeEnter: (to, from, next) => {
-                refreshAPIUrl();
-                fetch(
-                    `${api_server}/user?username=${to.path.slice(1, to.path.length)}`,
-                    {
-                        method: "GET",
-                        mode: "no-cors"
-                    }
-                )
-                    .then(res => {
-                        return res.text();
-                    })
-                    .then(json => {
-                        json ? next() : next({path: "/404"});
-                    })
-                    .catch(() => {
-                        next({path: "/404"});
-                    });
-            }
-        }
     ],
-    mode: "history"
+    mode: "history",
 });
 
 function refreshAPIUrl() {
