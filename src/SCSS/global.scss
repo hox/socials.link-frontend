@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://unpkg.com/aos@next/dist/aos.css");
+
+@import "variables.scss";
+
+.title {
+    font-size: 80px;
+    font-weight: 800;
+    font-family: "Roboto", sans-serif;
+}
+
+.max-width {
+    max-width: $max-width-desktop;
+    margin: auto;
+}
+
+@media only screen and (max-width: 900px) {
+    .max-width {
+        max-width: $max-width-mobile;
+    }
+
+    .title {
+        font-size: 50px;
+    }
+}

@@ -10,7 +10,7 @@
 
 <script>
     import LandingHeader from "./LandingHeader.vue";
-    import LandingIntegration from "./LandingIntegration.vue";
+    import LandingIntegration from "./LandingIntegrations.vue";
     import LandingTestimonies from "./LandingTestimonies.vue";
     import LandingPlans from "./LandingPlans.vue";
     import LandingFooter from "./LandingFooter.vue";
