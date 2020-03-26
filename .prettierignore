@@ -1,5 +1,6 @@
 /public/
 /src/assets/
+/.browserslistrc
 /.flowconfig
 /.gitignore
 /.gitlab-ci.yml
