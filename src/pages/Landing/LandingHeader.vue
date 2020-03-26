@@ -1,0 +1,49 @@
+<template>
+    <div class="landing-header">
+        <div id="parent-div">
+            <span class="title" id="title">Welcome to Your<br />Online Business Card</span>
+            <img id="display" src="@/assets/IMG/macos.png" alt="Dashboard Visual" />
+        </div>
+    </div>
+</template>
+
+<script>
+    export default {
+        name: "LandingHeader"
+    };
+</script>
+
+<style lang="scss" scoped>
+    #parent-div {
+        max-width: 60%;
+        margin: auto;
+        font-size: 16px;
+    }
+
+    #title {
+        display: inline-block;
+        margin: 140px 0 90px 0;
+        text-align: left;
+    }
+
+    #display {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 0 30px -4px rgba(0, 0, 0, 0.75);
+    }
+
+    @media only screen and (max-width: 900px) {
+        #parent-div {
+            max-width: 70%;
+        }
+
+        #title {
+            font-size: 60px;
+            margin: 80px 0 120px 0;
+        }
+
+        #display {
+            display: none;
+        }
+    }
+</style>
