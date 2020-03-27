@@ -2,6 +2,8 @@ import Vue from "vue";
 import Router from "vue-router";
 
 import Landing from "@/views/Landing/Landing.vue";
+import Login from "@/views/Login/Login.vue";
+
 import Not_Found from "@/views/Error/NotFound.vue";
 
 // let log = require("./assets/JS/logger.js");
@@ -61,6 +63,11 @@ export default new Router({
             path: "/",
             name: "home",
             component: Landing
+        },
+        {
+            path: "/login",
+            name: "login",
+            component: Login
         },
         {
             path: "/404",

@@ -8,15 +8,21 @@
             <div class="plans" id="teams">
                 <div class="plans-spacing">
                     <div class="plan-name">
-                        <span class="plan-title white">Teams</span><br /><span class="plan-price white"
-                            >$5 / Month</span
-                        >
+                        <span class="plan-title white">Teams</span>
+                        <br />
+                        <span class="plan-price white">$5 / Month</span>
                     </div>
-                    <PlansFeatures color="white" text-color="white" v-bind:features="defaultFeatures" />
+                    <PlansFeatures
+                        color="white"
+                        text-color="white"
+                        class="features"
+                        v-bind:features="defaultFeatures"
+                    />
                     <PlansFeatures
                         color="green"
                         id="team-features"
                         text-color="green"
+                        class="features"
                         v-bind:features="teamsFeatures"
                     />
                 </div>
@@ -24,12 +30,15 @@
             <div class="plans" id="individual">
                 <div class="plans-spacing">
                     <div class="plan-name">
-                        <span class="plan-title">Individual</span><br /><span class="plan-price">Free</span>
+                        <span class="plan-title">Individual</span>
+                        <br />
+                        <span class="plan-price">Free</span>
                     </div>
                     <PlansFeatures
                         color="black"
                         id="free-features"
                         text-color="black"
+                        class="features"
                         v-bind:features="defaultFeatures"
                     />
                 </div>
@@ -108,6 +117,11 @@
     #individual {
         background: $lightgray;
     }
+
+    .features {
+        font-family: $title-font;
+    }
+
     .white {
         color: #fff;
     }

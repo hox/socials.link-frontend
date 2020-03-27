@@ -8,7 +8,7 @@
             <div id="navbar-links-parent">
                 <a href="/#plans" class="navbar-link">Plans</a>
                 <a href="/#features" class="navbar-link">Features</a>
-                <a href="/login" class="navbar-link">Login</a>
+                <a href="/login" id="navbar-space" class="navbar-link">Login</a>
                 <a href="/signup" class="navbar-link">Signup</a>
             </div>
         </div>
@@ -59,6 +59,9 @@
 <style lang="scss">
     body {
         margin: 0;
+        letter-spacing: 0;
+        scroll-behavior: smooth;
+        text-rendering: optimizeLegibility;
     }
 
     #navbar {
@@ -104,12 +107,16 @@
         padding-right: 15px;
     }
 
+    #navbar-space {
+        margin-left: 40px;
+    }
+
     .navbar-link {
         font-family: $title-font;
         font-weight: 400;
         color: $text;
         text-decoration: none;
-        margin-left: 25px;
+        margin-left: 20px;
         position: relative;
     }
 

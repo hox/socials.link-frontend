@@ -4,16 +4,12 @@
             <div id="logo-flex">
                 <div id="footer-column-flex">
                     <div class="footer-column">
-                        <span class="column-title">
-                            Service
-                        </span>
+                        <span class="column-title">Service</span>
                         <a href="#">About Us</a>
                         <a href="#">Jobs</a>
                     </div>
                     <div class="footer-column">
-                        <span class="column-title">
-                            Resources
-                        </span>
+                        <span class="column-title">Resources</span>
                         <a href="#">Terms & Conditions</a>
                         <a href="#">Privacy Policy</a>
                         <a href="#">Status</a>
@@ -61,14 +57,14 @@
 
     .column-title {
         font-weight: 700;
-        font: $title-font;
+        font-family: $title-font;
     }
 
     a {
         text-decoration: none;
         transition: 50ms;
         color: $grey;
-        font: $title-font;
+        font-family: $title-font;
         display: block;
     }
 
