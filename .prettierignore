@@ -1,0 +1,10 @@
+/public/
+/src/assets/
+/.browserslistrc
+/.flowconfig
+/.gitignore
+/.gitlab-ci.yml
+/.prettierignore
+/package.json
+/package-lock.json
+/.idea

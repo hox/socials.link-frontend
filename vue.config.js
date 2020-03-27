@@ -1,5 +1,9 @@
 module.exports = {
-  css: {
-    modules: true
-  }
+    css: {
+        loaderOptions: {
+            sass: {
+                prependData: `@import "@/SCSS/global.scss";`
+            }
+        }
+    }
 };
