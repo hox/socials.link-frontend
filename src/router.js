@@ -63,6 +63,11 @@ export default new Router({
             component: Landing
         },
         {
+            path: "/login",
+            name: "login",
+            component: Login
+        },
+        {
             path: "/404",
             name: "404",
             component: Not_Found
