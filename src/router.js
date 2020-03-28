@@ -3,6 +3,7 @@ import Router from "vue-router";
 
 import Landing from "@/views/Landing/Landing.vue";
 import Not_Found from "@/views/Error/NotFound.vue";
+import Login from "@/views/Login/Login.vue";
 
 // let log = require("./assets/JS/logger.js");
 
