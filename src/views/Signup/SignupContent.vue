@@ -2,7 +2,7 @@
     <div class="landing-container">
         <div class="max-width">
             <div class="container">
-                <div class="login-container">
+                <div class="signup-container">
                     <div class="tp-auth">
                         <a href="#" class="tp-anchor"
                             ><img src="@/assets/auth_buttons/g_signin@2x.png" class="tp-button"
@@ -10,19 +10,23 @@
                     </div>
                     <div class="auth-spacer">OR</div>
                     <form class="basic-auth">
-                        <div class="login-textfield blue">
+                        <div class="signup-textfield blue">
                             <input type="text" required />
-                            <label data-content="Username / Email">Username / Email</label>
+                            <label data-content="Email">Email</label>
                         </div>
-
-                        <div class="login-textfield red">
+                        <div class="signup-textfield blue">
+                            <input type="text" required />
+                            <label data-content="Username">Username</label>
+                        </div>
+                        <div class="signup-textfield blue">
                             <input type="password" required />
                             <label data-content="Password">Password</label>
-                            <div class="login-link">
-                                <a href="/forgot">Forgot Password</a>
-                            </div>
                         </div>
-                        <button class="login-submit">Login</button>
+                        <div class="signup-textfield red">
+                            <input type="password" required />
+                            <label data-content="Repeat Password">Repeat Password</label>
+                        </div>
+                        <button class="signup-submit">Sign Up</button>
                     </form>
                 </div>
             </div>
@@ -32,7 +36,7 @@
 
 <script>
     export default {
-        name: "LandingContent"
+        name: "SignupContent"
     };
 </script>
 
@@ -42,13 +46,13 @@
         flex-direction: row;
         justify-content: space-between;
     }
-    .login-container {
+    .signup-container {
         align-items: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
         width: 500px;
-        height: 530px;
+        height: 600px;
         background: #000000;
         border-radius: 25px;
     }
@@ -58,13 +62,13 @@
         padding-top: 20px;
     }
 
-    .login-textfield {
+    .signup-textfield {
         height: 4rem;
         width: 100%;
         margin: 0 auto;
     }
 
-    .login-submit {
+    .signup-submit {
         width: 180px;
         height: 40px;
         display: block;
@@ -76,7 +80,7 @@
         font-weight: 700;
     }
 
-    .login-textfield input {
+    .signup-textfield input {
         background: none;
         border: none;
         display: block;
@@ -85,28 +89,26 @@
         width: 100%;
         border-bottom: 2px solid #fff;
         color: #ffffff;
-        font-weight: 600;
     }
-    .login-textfield input:focus {
+    .signup-textfield input:focus {
         outline: none;
     }
-    .login-textfield label {
+    .signup-textfield label {
         display: inline-block;
         font-size: 0;
         pointer-events: none;
         position: relative;
         font-family: $title-font;
-        font-weight: 700;
         width: 100%;
         color: #ffffff;
     }
-    .login-textfield label::before {
+    .signup-textfield label::before {
         content: attr(data-content);
         position: relative;
         transition: all 0.2s ease;
         will-change: font-size, top;
     }
-    .login-textfield label::after {
+    .signup-textfield label::after {
         bottom: 0.9rem;
         content: "";
         height: 0.3rem;
@@ -116,21 +118,21 @@
         width: 0;
         will-change: width, left;
     }
-    .login-textfield label::before,
-    .login-textfield input[required]:focus ~ label::before {
+    .signup-textfield label::before,
+    .signup-textfield input[required]:focus ~ label::before {
         font-size: 0.75rem;
         top: -3.25rem;
     }
-    .login-textfield input:focus ~ label::after {
+    .signup-textfield input:focus ~ label::after {
         left: 0%;
         width: 100%;
     }
-    .login-textfield input:invalid ~ label::before {
+    .signup-textfield input:invalid ~ label::before {
         font-size: 1rem;
         top: -2rem;
     }
 
-    .login-link {
+    .signup-link {
         font-family: $title-font;
         font-weight: 400;
         font-size: 14px;
