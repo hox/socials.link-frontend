@@ -3,12 +3,13 @@
         <!--For anchor link-->
         <span id="plans" />
         <!--        -->
-        <h1 class="title" id="title">Made for Everyone</h1>
+        <h1 class="title-grand" id="title">Made for Everyone</h1>
         <div id="plans-flex">
             <div class="plans" id="teams">
                 <div class="plans-spacing">
                     <div class="plan-name">
-                        <span class="plan-title white">Teams</span><br /><span class="plan-price white"
+                        <span class="plan-title title white">Teams</span><br /><span
+                            class="plan-price title-petit white"
                             >$5 / Month</span
                         >
                     </div>
@@ -24,7 +25,9 @@
             <div class="plans" id="individual">
                 <div class="plans-spacing">
                     <div class="plan-name">
-                        <span class="plan-title">Individual</span><br /><span class="plan-price">Free</span>
+                        <span class="plan-title title">Individual</span><br /><span class="plan-price title-petit"
+                            >Free</span
+                        >
                     </div>
                     <PlansFeatures
                         color="black"
@@ -95,9 +98,6 @@
     }
 
     .plan-title {
-        font-size: 50px;
-        font-weight: 800;
-        font-family: $title-font;
         margin: 0;
     }
 
@@ -113,9 +113,6 @@
     }
 
     .plan-price {
-        font-size: 25px;
-        font-weight: 400;
-        font-family: $title-font;
         margin: 0;
     }
 

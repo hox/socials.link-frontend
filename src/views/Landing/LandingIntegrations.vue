@@ -4,7 +4,7 @@
         <span id="integrations" />
         <!--        -->
         <div class="max-width">
-            <div class="title" id="title">Easily Link to<br />Dozens of Providers</div>
+            <div class="title-grand" id="title">Easily Link to<br />Dozens of Providers</div>
             <div class="integrations-flex">
                 <img
                     class="logo"

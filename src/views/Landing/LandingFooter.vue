@@ -4,20 +4,20 @@
             <div id="logo-flex">
                 <div id="footer-column-flex">
                     <div class="footer-column">
-                        <span class="column-title">
+                        <span class="header">
                             Service
                         </span>
-                        <a href="#">About Us</a>
-                        <a href="#">Jobs</a>
+                        <a href="#" class="header-petite">About Us</a>
+                        <a href="#" class="header-petite">Jobs</a>
                     </div>
                     <div class="footer-column">
-                        <span class="column-title">
+                        <span class="header">
                             Resources
                         </span>
-                        <a href="#">Terms & Conditions</a>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Status</a>
-                        <a href="#">Branding</a>
+                        <a href="#" class="header-petite">Terms & Conditions</a>
+                        <a href="#" class="header-petite">Privacy Policy</a>
+                        <a href="#" class="header-petite">Status</a>
+                        <a href="#" class="header-petite">Branding</a>
                     </div>
                 </div>
                 <a href="#">
@@ -59,16 +59,10 @@
         width: 100%;
     }
 
-    .column-title {
-        font-weight: 700;
-        font: $title-font;
-    }
-
     a {
         text-decoration: none;
         transition: 50ms;
         color: $grey;
-        font: $title-font;
         display: block;
     }
 

@@ -2,7 +2,7 @@
     <div class="features">
         <div class="feature" v-for="(content, i) in features" v-bind:key="i">
             <span id="check" class="material-icons" v-bind:class="color">done</span>
-            <span class="feature-text" v-bind:class="textColor">
+            <span class="header-petite" v-bind:class="textColor">
                 {{ content }}
             </span>
         </div>
@@ -52,11 +52,5 @@
 
     #check {
         margin: 0 10px 0 0;
-    }
-
-    #feature-text {
-        font-size: 10px;
-        font-weight: 400;
-        font-family: $title-font;
     }
 </style>

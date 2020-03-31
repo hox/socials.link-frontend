@@ -1,7 +1,7 @@
 <template>
     <div class="landing-header">
         <div class="max-width">
-            <span class="title" id="title">Welcome to Your<br />Online Business Card</span>
+            <span class="title-grand" id="title">Welcome to Your<br />Online Business Card</span>
             <img id="display" src="@/assets/IMG/macos.png" alt="Dashboard Visual" />
         </div>
         <div id="curve"></div>
