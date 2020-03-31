@@ -1,15 +1,70 @@
-@import url("https://fonts.googleapis.com/css?family=Dosis:400,600,700,800&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,600,700,800,900&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,600,700,800,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap');
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @import url("https://unpkg.com/aos@next/dist/aos.css");
 
+//legacy
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 @import "variables.scss";
 
+/* Title Grand 400 */
+.title-grand {
+    font-family: Archivo Black, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 72px;
+    line-height: 130%;
+    /* or 94px */
+}
+
+/* Title 400 */
 .title {
-    font-size: 80px;
-    font-weight: 800;
-    font-family: $title-font;
+    font-family: Archivo Black, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 130%;
+    /* or 62px */
+}
+
+/* Title Petite 700 */
+.title-petit {
+    font-family: Space Mono, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 140.62%;
+    /* identical to box height, or 34px */
+}
+
+/* Text Grand 400 */
+.text-grand {
+    font-family: Space Mono, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 140.62%;
+    /* identical to box height, or 51px */
+}
+
+/* Header 700 */
+.header {
+    font-family: Space Mono, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 140.62%;
+    /* identical to box height, or 20px */
+}
+
+/* Header Petite 400 */
+.header-petite {
+    font-family: Space Mono, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 120%;
+    /* identical to box height, or 17px */
 }
 
 .max-width {
