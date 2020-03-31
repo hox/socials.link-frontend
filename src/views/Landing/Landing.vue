@@ -2,7 +2,7 @@
     <div class="container">
         <LandingHeader />
         <LandingIntegration />
-        <LandingTestimonies />
+        <!--        <LandingTestimonies />-->
         <LandingPlans />
         <LandingFooter />
     </div>
@@ -11,7 +11,7 @@
 <script>
     import LandingHeader from "./LandingHeader.vue";
     import LandingIntegration from "./LandingIntegrations.vue";
-    import LandingTestimonies from "./LandingTestimonies.vue";
+    // import LandingTestimonies from "./LandingTestimonies.vue";
     import LandingPlans from "./LandingPlans.vue";
     import LandingFooter from "./LandingFooter.vue";
 
@@ -20,7 +20,7 @@
         components: {
             LandingHeader,
             LandingIntegration,
-            LandingTestimonies,
+            // LandingTestimonies,
             LandingPlans,
             LandingFooter
         }

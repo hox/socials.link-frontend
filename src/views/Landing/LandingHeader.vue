@@ -1,7 +1,7 @@
 <template>
     <div class="landing-header">
         <div class="max-width">
-            <span class="title-grand" id="title">Welcome to Your <br />Online Identity</span>
+            <div class="title-grand" id="title">Welcome to Your <br />Online Identity</div>
             <span class="text-grand" id="sub-title">All Your Socials in One</span>
             <img id="display" src="@/assets/IMG/macos.png" alt="Dashboard Visual" />
         </div>
@@ -17,8 +17,8 @@
 
 <style lang="scss" scoped>
     #title {
-        display: inline-block;
-        margin: 140px 0 0 0;
+        display: block;
+        padding: 140px 0 0 0;
         text-align: left;
     }
 

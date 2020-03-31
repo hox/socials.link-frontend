@@ -4,6 +4,7 @@
         <span id="plans" />
         <!--        -->
         <h1 class="title-grand" id="title">Made for Everyone</h1>
+        <span class="text-grand" id="sub-title">Advanced features for free.<br />Expert features for teams.</span>
         <div id="plans-flex">
             <div class="plans" id="teams">
                 <div class="plans-spacing">
@@ -73,8 +74,14 @@
     }
 
     #title {
-        margin: 80px 0 60px 0;
+        margin: 80px 0 0 0;
         text-align: left;
+    }
+
+    #sub-title {
+        margin: 0 0 60px 0;
+        text-align: left;
+        display: block;
     }
 
     #plans-flex {

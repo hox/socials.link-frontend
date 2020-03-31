@@ -5,6 +5,13 @@
         <!--        -->
         <div class="max-width">
             <div class="title-grand" id="title">Easily Link to<br />Dozens of Providers</div>
+            <div id="sub-title-parent">
+                <span class="text-grand" id="sub-title"
+                    >Centralize all your social media with one simple link. Integrations with major platforms and many
+                    planned for the future.</span
+                >
+            </div>
+
             <div class="integrations-flex">
                 <img
                     class="logo"
@@ -97,7 +104,18 @@
 
     #title {
         text-align: right;
+        margin: 0 0 10px 0;
+    }
+
+    #sub-title-parent {
+        display: inline-block;
+        text-align: right;
         margin: 0 0 110px 0;
+    }
+
+    #sub-title {
+        display: inline-block;
+        width: 80%;
     }
 
     .integrations-flex {
